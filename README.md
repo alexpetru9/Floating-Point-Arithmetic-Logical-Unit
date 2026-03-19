@@ -1,28 +1,39 @@
-# 🧮 Floating-Point Arithmetic Logical Unit (ALU) - VHDL
+🧮 Floating-Point Arithmetic Logic Unit (ALU) - VHDL
+This project consists of the design and implementation of a Floating-Point Unit (FPU) that adheres to the IEEE-754 standard. The system is capable of performing 32-bit Addition and Multiplication operations (single precision).
 
-Acest proiect constă în proiectarea și implementarea unei unități de calcul în virgulă mobilă (FPU) care respectă standardul **IEEE-754**. Sistemul este capabil să execute operații de **Adunare** și **Înmulțire** pe 32 de biți (single precision).
+✨ Technical Features
+Standard: IEEE-754 (Single Precision).
 
-## ✨ Caracteristici Tehnice
-* **Standard:** IEEE-754 (Single Precision).
-* **Operații Suportate:** Adunare (+) și Înmulțire (*).
-* **Arhitectură:** Pipeline modularizat pentru eficiență.
-* **Limbaj:** VHDL.
-* **Tool-uri:** Xilinx Vivado / ModelSim.
+Supported Operations: Addition (+) and Multiplication (*).
 
-## 🛠️ Structura Implementării (Etape)
-Implementarea urmează fluxul critic de calcul hardware:
-1. **Unpack:** Extragerea semnului, exponentului și mantisei.
-2. **Exponent Subtract & Alignment:** Egalarea exponenților prin shiftarea mantisei.
-3. **Addition/Multiplication:** Calculul propriu-zis al rezultatului intermediar.
-4. **Normalization:** Readucerea rezultatului în formatul standard.
-5. **Rounding:** Rotunjirea conform normelor IEEE.
-6. **Pack:** Reasamblarea rezultatului final pe 32 de biți.
+Architecture: Modularized pipeline for efficiency.
 
-## 🚀 Validare
-Proiectul include un **Testbench** complex care verifică precizia aritmetică pentru:
-* Numere pozitive și negative.
-* Cazuri de Overflow și Underflow.
-* Adunări cu exponenți diferiți.
+Language: VHDL.
 
----
-*Proiect realizat în cadrul disciplinei "Structura Sistemelor de Calcul" la UTCN.*
+Tools: Xilinx Vivado / ModelSim.
+
+🛠️ Implementation Structure (Stages)
+The implementation follows the critical hardware calculation flow:
+
+Unpack: Extracting the sign, exponent, and mantissa.
+
+Exponent Subtract & Alignment: Equalizing exponents by shifting the mantissa.
+
+Addition/Multiplication: The actual calculation of the intermediate result.
+
+Normalization: Bringing the result back into the standard format.
+
+Rounding: Rounding according to IEEE norms.
+
+Pack: Reassembling the final 32-bit result.
+
+🚀 Validation
+The project includes a complex Testbench that verifies arithmetic precision for:
+
+Positive and negative numbers.
+
+Overflow and Underflow cases.
+
+Additions with different exponents.
+
+Project developed for the "Computer Systems Architecture" course at UTCN.
